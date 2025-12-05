@@ -5,28 +5,29 @@ import paintingAction from "@/assets/painting-action.png";
 
 const NB100Section = () => {
   return (
-    <section id="nb100" className="py-20 md:py-32 bg-muted">
+    <section id="nb100" className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-4">
         {/* Hero Banner */}
-        <div className="relative rounded-3xl overflow-hidden mb-20">
+        <div className="relative rounded-[2rem] overflow-hidden mb-20">
           <img
             src={nb100Hero}
             alt="Nauber NB-100 - Potência Industrial"
             className="w-full h-[400px] md:h-[500px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 to-foreground/60" />
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-8 md:px-16">
-              <span className="inline-block bg-accent text-accent-foreground font-semibold px-4 py-2 rounded-full text-sm mb-4">
+              <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-5 py-2.5 rounded-full text-sm mb-6">
+                <Zap className="w-4 h-4" />
                 POTÊNCIA INDUSTRIAL
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-4 max-w-2xl">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background mb-4 max-w-2xl tracking-tight">
                 NB-100 NAUBER — Potência Para Grandes Obras
               </h2>
-              <p className="text-primary-foreground/80 text-lg max-w-xl mb-6">
+              <p className="text-background/80 text-lg max-w-xl mb-8 leading-relaxed">
                 Criada para quem precisa entregar obras grandes rápido e com qualidade profissional.
               </p>
-              <Button variant="cta" size="lg" asChild>
+              <Button variant="ctaWhite" size="lg" asChild>
                 <a href="#orcamento">
                   Saber Mais
                   <ArrowRight className="w-5 h-5" />
@@ -37,7 +38,7 @@ const NB100Section = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
           <div className="order-2 lg:order-1 space-y-8">
             <div>
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -59,8 +60,8 @@ const NB100Section = () => {
                 { icon: Shield, label: "Construção Robusta", desc: "Máxima durabilidade" },
                 { icon: Wrench, label: "Fácil Manutenção", desc: "Peças acessíveis" }
               ].map((item, index) => (
-                <div key={index} className="bg-card rounded-xl p-4 shadow-soft border border-border">
-                  <item.icon className="w-8 h-8 text-accent mb-2" />
+                <div key={index} className="bg-card rounded-2xl p-5 shadow-soft border border-border hover:border-primary/30 transition-colors group hover:-translate-y-1 transition-all">
+                  <item.icon className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
                   <p className="font-semibold text-foreground">{item.label}</p>
                   <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </div>
@@ -69,7 +70,7 @@ const NB100Section = () => {
           </div>
 
           <div className="order-1 lg:order-2 relative">
-            <div className="absolute inset-0 bg-accent/10 rounded-3xl transform rotate-3" />
+            <div className="absolute inset-0 bg-primary/10 rounded-[2rem] transform rotate-3" />
             <img
               src={paintingAction}
               alt="Pintura profissional com equipamento Nauber"
@@ -79,7 +80,7 @@ const NB100Section = () => {
         </div>
 
         {/* Technical Specs */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 shadow-medium border border-border">
+        <div className="bg-card rounded-[2rem] p-8 md:p-12 shadow-medium border border-border">
           <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
             O Que a NB-100 Oferece
           </h3>
@@ -106,8 +107,8 @@ const NB100Section = () => {
                 desc: "De tinta e mão de obra em cada projeto"
               }
             ].map((spec, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-muted hover:bg-accent/10 transition-colors">
-                <p className="font-display text-3xl font-bold text-accent mb-1">{spec.value}</p>
+              <div key={index} className="text-center p-6 rounded-2xl bg-secondary hover:bg-primary/10 transition-colors group">
+                <p className="font-display text-3xl font-bold text-primary mb-1">{spec.value}</p>
                 <p className="font-semibold text-foreground mb-2">{spec.label}</p>
                 <p className="text-muted-foreground text-sm">{spec.desc}</p>
               </div>
@@ -116,13 +117,14 @@ const NB100Section = () => {
         </div>
 
         {/* Solution Box */}
-        <div className="mt-12 bg-dark-gradient rounded-3xl p-8 md:p-12">
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="mt-12 bg-hero-gradient rounded-[2rem] p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute inset-0 pattern-dots opacity-20" />
+          <div className="max-w-3xl mx-auto text-center relative z-10">
             <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
               A Grande Solução da NB-100
             </h3>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              A NB-100 elimina o maior problema da pintura pesada: <strong className="text-accent">como entregar 
+              A NB-100 elimina o maior problema da pintura pesada: <strong className="text-primary-foreground">como entregar 
               grandes áreas no menor tempo possível sem perda de acabamento.</strong> Ela aumenta 
               drasticamente a capacidade operacional de equipes e empreiteiras, permitindo 
               entregar projetos maiores com menos recursos.
