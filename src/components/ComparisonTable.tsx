@@ -15,33 +15,34 @@ const ComparisonTable = () => {
   ];
 
   return (
-    <section id="comparativo" className="py-20 md:py-32 bg-muted">
+    <section id="comparativo" className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-bold px-5 py-2.5 rounded-full text-sm mb-6">
+            <span className="w-2 h-2 bg-primary rounded-full" />
             COMPARATIVO
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            DX-3 vs NB-100: Qual é a <span className="text-gradient">Ideal Para Você</span>?
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+            DX-3 vs NB-100: Qual é a <span className="text-primary">Ideal Para Você</span>?
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Compare as características e escolha a máquina que melhor atende às suas necessidades.
           </p>
         </div>
 
         {/* Desktop Table */}
-        <div className="hidden md:block bg-card rounded-3xl shadow-strong overflow-hidden border border-border">
+        <div className="hidden md:block bg-card rounded-[2rem] shadow-strong overflow-hidden border border-border">
           <div className="grid grid-cols-3">
-            <div className="p-6 bg-muted font-semibold text-muted-foreground">
+            <div className="p-6 bg-secondary font-semibold text-muted-foreground">
               Característica
             </div>
             <div className="p-6 bg-primary text-center">
               <h3 className="font-display text-xl font-bold text-primary-foreground">DX-3</h3>
               <p className="text-primary-foreground/70 text-sm">Versátil e Ágil</p>
             </div>
-            <div className="p-6 bg-accent text-center">
-              <h3 className="font-display text-xl font-bold text-accent-foreground">NB-100</h3>
-              <p className="text-accent-foreground/70 text-sm">Potência Industrial</p>
+            <div className="p-6 bg-foreground text-center">
+              <h3 className="font-display text-xl font-bold text-background">NB-100</h3>
+              <p className="text-background/70 text-sm">Potência Industrial</p>
             </div>
           </div>
           
@@ -61,10 +62,10 @@ const ComparisonTable = () => {
                   feature.dx3
                 )}
               </div>
-              <div className="p-4 text-center text-muted-foreground bg-accent/5">
+              <div className="p-4 text-center text-muted-foreground bg-foreground/5">
                 {typeof feature.nb100 === "boolean" ? (
                   feature.nb100 ? (
-                    <Check className="w-5 h-5 text-accent mx-auto" />
+                    <Check className="w-5 h-5 text-foreground mx-auto" />
                   ) : (
                     <span className="text-muted-foreground/50">—</span>
                   )
@@ -101,10 +102,10 @@ const ComparisonTable = () => {
           </div>
 
           {/* NB-100 Card */}
-          <div className="bg-card rounded-2xl shadow-medium overflow-hidden border border-accent/30">
-            <div className="bg-accent p-6 text-center">
-              <h3 className="font-display text-2xl font-bold text-accent-foreground">NB-100</h3>
-              <p className="text-accent-foreground/70">Potência Industrial</p>
+          <div className="bg-card rounded-2xl shadow-medium overflow-hidden border border-foreground/30">
+            <div className="bg-foreground p-6 text-center">
+              <h3 className="font-display text-2xl font-bold text-background">NB-100</h3>
+              <p className="text-background/70">Potência Industrial</p>
             </div>
             <div className="p-6 space-y-4">
               {features.slice(0, 7).map((feature, index) => (
@@ -112,7 +113,7 @@ const ComparisonTable = () => {
                   <span className="text-muted-foreground text-sm">{feature.name}</span>
                   <span className="text-foreground font-medium text-sm text-right max-w-[50%]">
                     {typeof feature.nb100 === "boolean" ? (
-                      feature.nb100 ? <Check className="w-5 h-5 text-accent" /> : "—"
+                      feature.nb100 ? <Check className="w-5 h-5 text-foreground" /> : "—"
                     ) : (
                       feature.nb100
                     )}
@@ -128,7 +129,7 @@ const ComparisonTable = () => {
           <p className="text-muted-foreground mb-6">
             Não sabe qual escolher? Fale com nossos especialistas.
           </p>
-          <Button variant="hero" size="xl" asChild>
+          <Button variant="default" size="xl" asChild>
             <a href="#orcamento">Falar com Especialista</a>
           </Button>
         </div>
