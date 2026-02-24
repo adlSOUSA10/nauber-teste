@@ -5,6 +5,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import TargetAudience from "@/components/TargetAudience";
 import Gallery from "@/components/Gallery";
+import CasaTesteSection from "@/components/CasaTesteSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
@@ -30,6 +31,7 @@ const Index = () => {
           <ComparisonTable />
           <TargetAudience />
           <Gallery />
+          <CasaTesteSection />
           <FinalCTA />
         </main>
         <Footer />
