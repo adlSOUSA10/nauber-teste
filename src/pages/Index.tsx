@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import DX3Section from "@/components/DX3Section";
-import NB100Section from "@/components/NB100Section";
+import MachinesSection from "@/components/MachinesSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import TargetAudience from "@/components/TargetAudience";
@@ -26,8 +25,7 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          <DX3Section />
-          <NB100Section />
+          <MachinesSection />
           <BenefitsSection />
           <ComparisonTable />
           <TargetAudience />
