@@ -71,6 +71,16 @@ const MachinesSection = () => {
                   <p className="text-muted-foreground text-xs">Capacidade de Entrega</p>
                 </div>
               </div>
+              {/* Vídeo DX-3 */}
+              <div className="aspect-[9/16] max-h-72 w-full rounded-lg overflow-hidden mb-5">
+                <iframe
+                  src="https://www.youtube.com/embed/-CQONK6YsLM"
+                  title="Vídeo DX-3 Nauber"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
               <Button variant="default" size="default" className="w-full" asChild>
                 <a href="#orcamento">Solicitar Orçamento DX-3 <ArrowRight className="w-4 h-4" /></a>
               </Button>
@@ -123,6 +133,16 @@ const MachinesSection = () => {
                   <p className="font-display text-xl font-bold text-foreground">Potente</p>
                   <p className="text-muted-foreground text-xs">Motor Industrial</p>
                 </div>
+              </div>
+              {/* Vídeo NB-100 */}
+              <div className="aspect-[9/16] max-h-72 w-full rounded-lg overflow-hidden mb-5">
+                <iframe
+                  src="https://www.youtube.com/embed/r9_Y-ILBqbc"
+                  title="Vídeo NB-100 Nauber"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
               </div>
               <Button variant="outline" size="default" className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background" asChild>
                 <a href="#orcamento">Solicitar Orçamento NB-100 <ArrowRight className="w-4 h-4" /></a>
