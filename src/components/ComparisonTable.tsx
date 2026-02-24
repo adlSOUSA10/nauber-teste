@@ -125,11 +125,11 @@ const ComparisonTable = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-6">
+        <div className="mt-8 text-center">
+          <p className="text-muted-foreground mb-4 text-sm">
             Não sabe qual escolher? Fale com nossos especialistas.
           </p>
-          <Button variant="default" size="xl" asChild>
+          <Button variant="default" size="lg" asChild>
             <a href="#orcamento">Falar com Especialista</a>
           </Button>
         </div>

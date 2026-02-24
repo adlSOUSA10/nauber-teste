@@ -42,41 +42,31 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-background relative">
+    <section className="py-12 md:py-20 bg-background relative">
       <div className="absolute inset-0 pattern-dots opacity-30" />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-bold px-5 py-2.5 rounded-full text-sm mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-bold px-4 py-2 rounded-full text-sm mb-4">
             <span className="w-2 h-2 bg-primary rounded-full" />
             BENEFÍCIOS
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
             Por Que Escolher as Máquinas <span className="text-primary">Nauber</span>?
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             Vantagens reais que transformam seu trabalho e seus resultados financeiros.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-300 border border-border hover:border-primary/30 overflow-hidden hover:-translate-y-1"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-              
-              <div className="relative w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:shadow-lg transition-shadow">
-                <benefit.icon className="w-7 h-7 text-primary-foreground" />
+            <div key={index} className="group relative bg-card rounded-xl p-6 shadow-soft hover:shadow-strong transition-all duration-300 border border-border hover:border-primary/30 overflow-hidden hover:-translate-y-1">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full transform translate-x-12 -translate-y-12 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative w-11 h-11 bg-primary rounded-xl flex items-center justify-center mb-4 shadow-md">
+                <benefit.icon className="w-5 h-5 text-primary-foreground" />
               </div>
-              
-              <h3 className="relative font-display text-xl font-bold text-foreground mb-3">
-                {benefit.title}
-              </h3>
-              
-              <p className="relative text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
+              <h3 className="relative font-display text-lg font-bold text-foreground mb-2">{benefit.title}</h3>
+              <p className="relative text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
             </div>
           ))}
         </div>
