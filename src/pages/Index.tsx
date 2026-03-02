@@ -8,6 +8,7 @@ import Gallery from "@/components/Gallery";
 import CasaTesteSection from "@/components/CasaTesteSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
@@ -35,6 +36,7 @@ const Index = () => {
           <FinalCTA />
         </main>
         <Footer />
+        <FloatingButtons />
       </div>
     </>
   );
