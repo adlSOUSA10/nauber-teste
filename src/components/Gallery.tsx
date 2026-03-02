@@ -2,29 +2,25 @@ import dx3Hero from "@/assets/dx3-hero.png";
 import nb100Hero from "@/assets/nb100-hero.png";
 import paintingAction from "@/assets/painting-action.png";
 import equipmentDetail from "@/assets/equipment-detail.png";
+import dx3Outdoor from "@/assets/dx3-outdoor.jpg";
+import dx3Front from "@/assets/dx3-front.jpg";
+import dx3Angle from "@/assets/dx3-angle.jpg";
+import dx3Action from "@/assets/dx3-action.jpg";
+import nb100Operator from "@/assets/nb100-operator.jpg";
+import nb100Side from "@/assets/nb100-side.jpg";
+import nb100Front from "@/assets/nb100-front.jpg";
+import dx3Outdoor2 from "@/assets/dx3-outdoor2.jpg";
 
 const Gallery = () => {
   const images = [
-    {
-      src: dx3Hero,
-      alt: "Nauber DX-3 - Máquina de Pintura Airless",
-      caption: "DX-3 em detalhes"
-    },
-    {
-      src: paintingAction,
-      alt: "Pintura profissional em ação",
-      caption: "Aplicação profissional"
-    },
-    {
-      src: nb100Hero,
-      alt: "Nauber NB-100 - Potência Industrial",
-      caption: "NB-100 Industrial"
-    },
-    {
-      src: equipmentDetail,
-      alt: "Detalhes do equipamento de pintura",
-      caption: "Componentes de precisão"
-    }
+    { src: dx3Outdoor, alt: "DX-3 ao ar livre", caption: "DX-3 em campo" },
+    { src: dx3Front, alt: "DX-3 vista frontal", caption: "DX-3 Frontal" },
+    { src: dx3Angle, alt: "DX-3 vista angular", caption: "DX-3 Angular" },
+    { src: dx3Action, alt: "DX-3 em uso profissional", caption: "DX-3 em Ação" },
+    { src: nb100Operator, alt: "Operador com NB-100", caption: "NB-100 Operação" },
+    { src: nb100Side, alt: "NB-100 vista lateral", caption: "NB-100 Lateral" },
+    { src: nb100Front, alt: "NB-100 vista frontal", caption: "NB-100 Frontal" },
+    { src: dx3Outdoor2, alt: "DX-3 ao ar livre", caption: "DX-3 Outdoor" },
   ];
 
   return (
@@ -42,7 +38,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl shadow-medium hover:shadow-strong transition-all duration-300">
               <img src={image.src} alt={image.alt} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
