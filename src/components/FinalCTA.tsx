@@ -1,5 +1,40 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MessageCircle, Shield, Truck, CreditCard, Headphones } from "lucide-react";
+import { ArrowRight, Phone, Mail, MessageCircle, Shield, Truck, CreditCard, Headphones, MapPin, Clock } from "lucide-react";
+
+const lojas = [
+  {
+    nome: "Loja Campo Grande - Monteiro",
+    endereco: "Estr. do Monteiro, 967 - Campo Grande, Rio de Janeiro - RJ, 23045-831",
+    telefone: "(21) 3251-3756",
+    whatsapp: "(21) 99403-5132",
+    email: "contato@casadoviana.com",
+    horario: "Seg a Sex 8:00–18:00 | Sáb 8:00–13:00",
+  },
+  {
+    nome: "Loja Estrada do Pré",
+    endereco: "Rua Mora, 674 - Campo Grande, Rio de Janeiro - RJ, 23052-510",
+    telefone: "(21) 3251-3756",
+    whatsapp: "(21) 99403-5132",
+    email: "mkcasadoviana@hotmail.com",
+    horario: "Seg a Sex 8:00–18:00 | Sáb 8:00–13:00",
+  },
+  {
+    nome: "Loja Realengo",
+    endereco: "R. Gen. Azeredo, 849 - Realengo, Rio de Janeiro - RJ, 21765-000",
+    telefone: "(21) 3251-3756",
+    whatsapp: "(21) 99403-5132",
+    email: "contato@casadoviana.com",
+    horario: "Seg a Sex 8:00–18:00 | Sáb 8:00–13:00",
+  },
+  {
+    nome: "Loja Recreio dos Bandeirantes",
+    endereco: "R. Gen. Landri Gonçalves, 305 - Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-410",
+    telefone: "(21) 3251-3756",
+    whatsapp: "(21) 99403-5132",
+    email: "contato@casadoviana.com",
+    horario: "Seg a Sex 8:00–18:00 | Sáb 8:00–13:00",
+  },
+];
 
 const FinalCTA = () => {
   return (
@@ -12,25 +47,24 @@ const FinalCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <span className="inline-flex items-center gap-2 bg-primary-foreground text-primary font-bold px-5 py-2 rounded-full text-sm mb-6 shadow-lg">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            OFERTA ESPECIAL
+            CENTRAL DE ATENDIMENTO
           </span>
           
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-foreground mb-4 leading-tight">
             Transforme Sua Pintura Hoje Mesmo
           </h2>
           
-          <p className="text-lg text-primary-foreground/75 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Não perca mais tempo e dinheiro com métodos ultrapassados. 
-            Solicite agora seu orçamento e descubra como as máquinas Nauber 
-            podem revolucionar seu negócio.
+          <p className="text-lg text-primary-foreground/75 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Visite uma de nossas lojas ou entre em contato. A{" "}
+            <strong className="text-primary-foreground">Casa do Viana</strong> é a única revendedora autorizada Nauber na Zona Oeste do RJ.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
             <Button variant="ctaWhite" size="lg" className="text-base" asChild>
-              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5521966115638" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
                 Solicitar Orçamento via WhatsApp
                 <ArrowRight className="w-4 h-4" />
@@ -38,16 +72,40 @@ const FinalCTA = () => {
             </Button>
           </div>
 
-          {/* Contact Info */}
-          <div className="grid sm:grid-cols-2 gap-3 max-w-md mx-auto mb-10">
-            <a href="tel:+5500000000000" className="flex items-center justify-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/15 border border-primary-foreground/20 rounded-xl p-4 transition-all hover:-translate-y-1">
-              <Phone className="w-4 h-4 text-primary-foreground" />
-              <span className="text-primary-foreground font-medium text-sm">(00) 0000-0000</span>
-            </a>
-            <a href="mailto:contato@nauber.com.br" className="flex items-center justify-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/15 border border-primary-foreground/20 rounded-xl p-4 transition-all hover:-translate-y-1">
-              <Mail className="w-4 h-4 text-primary-foreground" />
-              <span className="text-primary-foreground font-medium text-sm">contato@nauber.com.br</span>
-            </a>
+          {/* Lojas Grid */}
+          <div className="grid sm:grid-cols-2 gap-4 mb-12 text-left">
+            {lojas.map((loja, index) => (
+              <div
+                key={index}
+                className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-5 hover:bg-primary-foreground/15 transition-all"
+              >
+                <h3 className="font-display font-bold text-primary-foreground text-base mb-3">
+                  {loja.nome}
+                </h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-start gap-2 text-primary-foreground/80">
+                    <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                    <span>{loja.endereco}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-primary-foreground/80">
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <a href={`tel:+55${loja.telefone.replace(/\D/g, "")}`} className="hover:text-primary-foreground transition-colors">
+                      {loja.telefone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-primary-foreground/80">
+                    <Mail className="w-4 h-4 shrink-0" />
+                    <a href={`mailto:${loja.email}`} className="hover:text-primary-foreground transition-colors">
+                      {loja.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-primary-foreground/80">
+                    <Clock className="w-4 h-4 shrink-0" />
+                    <span>{loja.horario}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Trust Badges */}
