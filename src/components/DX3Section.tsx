@@ -1,6 +1,6 @@
 import { Check, Gauge, Timer, Paintbrush, DollarSign } from "lucide-react";
-import dx3Hero from "@/assets/dx3-hero.png";
-import equipmentDetail from "@/assets/equipment-detail.png";
+import dx3Hero from "@/assets/dx3-outdoor.jpg";
+import equipmentDetail from "@/assets/dx3-action.jpg";
 
 const DX3Section = () => {
   const features = [

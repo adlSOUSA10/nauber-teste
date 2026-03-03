@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Check, Gauge, Timer, Paintbrush, DollarSign, Factory, Zap, Shield, Wrench, ArrowRight } from "lucide-react";
-import dx3Hero from "@/assets/dx3-hero.png";
-import nb100Hero from "@/assets/nb100-hero.png";
+import dx3Hero from "@/assets/dx3-front.jpg";
+import nb100Hero from "@/assets/nb100-front.jpg";
 
 const MachinesSection = () => {
   return (
