@@ -12,11 +12,11 @@ const CasaTesteSection = () => {
           </span>
 
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            <span className="text-primary">Casa Teste</span> — Revendedora Nauber
+            <span className="text-primary">Casa do Viana</span> — Revendedora Oficial Nauber
           </h2>
 
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-            A <strong className="text-foreground">Casa Teste</strong> é a revendedora autorizada dos produtos Nauber na{" "}
+            A <strong className="text-foreground">Casa do Viana</strong> é a <strong className="text-foreground">única revendedora autorizada</strong> dos produtos Nauber na{" "}
             <strong className="text-foreground">Zona Oeste do Rio de Janeiro</strong>. Com atendimento especializado, 
             oferecemos suporte completo desde a escolha do equipamento até o pós-venda.
           </p>
@@ -34,8 +34,8 @@ const CasaTesteSection = () => {
               <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground text-sm mb-1">Zona Oeste - RJ</h3>
-              <p className="text-muted-foreground text-xs">Atendimento presencial e entrega na região</p>
+              <h3 className="font-bold text-foreground text-sm mb-1">Única na Zona Oeste - RJ</h3>
+              <p className="text-muted-foreground text-xs">Exclusividade em revenda Nauber na região</p>
             </div>
 
             <div className="bg-card rounded-xl border border-border p-5 text-center">
@@ -47,9 +47,14 @@ const CasaTesteSection = () => {
             </div>
           </div>
 
-          <Button variant="default" size="lg" asChild>
-            <a href="#orcamento">Fale com a Casa Teste</a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button variant="default" size="lg" asChild>
+              <a href="#orcamento">Fale com a Casa do Viana</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://www.casadoviana.com/" target="_blank" rel="noopener noreferrer">Visite Nosso Site</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
