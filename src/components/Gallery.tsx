@@ -1,7 +1,3 @@
-import dx3Hero from "@/assets/dx3-hero.png";
-import nb100Hero from "@/assets/nb100-hero.png";
-import paintingAction from "@/assets/painting-action.png";
-import equipmentDetail from "@/assets/equipment-detail.png";
 import dx3Outdoor from "@/assets/dx3-outdoor.jpg";
 import dx3Front from "@/assets/dx3-front.jpg";
 import dx3Angle from "@/assets/dx3-angle.jpg";

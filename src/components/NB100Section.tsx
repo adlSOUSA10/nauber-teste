@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Factory, Zap, Shield, Wrench, ArrowRight } from "lucide-react";
-import nb100Hero from "@/assets/nb100-hero.png";
-import paintingAction from "@/assets/painting-action.png";
+import nb100Hero from "@/assets/nb100-front.jpg";
+import paintingAction from "@/assets/nb100-operator.jpg";
 
 const NB100Section = () => {
   return (

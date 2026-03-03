@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Clock, TrendingUp, CheckCircle } from "lucide-react";
-import dx3Hero from "@/assets/dx3-hero.png";
+import dx3Hero from "@/assets/dx3-front.jpg";
 
 const Hero = () => {
   return (
