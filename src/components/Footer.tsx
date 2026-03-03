@@ -1,21 +1,50 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MapPin, Phone, Mail, Clock } from "lucide-react";
+
+const lojas = [
+  {
+    nome: "Loja Campo Grande - Monteiro",
+    endereco: "Estr. do Monteiro, 967 - Campo Grande, RJ, 23045-831",
+    email: "contato@casadoviana.com",
+  },
+  {
+    nome: "Loja Estrada do Pré",
+    endereco: "Rua Mora, 674 - Campo Grande, RJ, 23052-510",
+    email: "mkcasadoviana@hotmail.com",
+  },
+  {
+    nome: "Loja Realengo",
+    endereco: "R. Gen. Azeredo, 849 - Realengo, RJ, 21765-000",
+    email: "contato@casadoviana.com",
+  },
+  {
+    nome: "Loja Recreio dos Bandeirantes",
+    endereco: "R. Gen. Landri Gonçalves, 305 - Recreio, RJ, 22795-410",
+    email: "contato@casadoviana.com",
+  },
+];
 
 const Footer = () => {
   return (
     <footer className="bg-foreground py-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
+          {/* Brand */}
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-display font-bold text-xl">N</span>
               </div>
               <span className="font-display font-bold text-xl text-background">NAUBER</span>
             </div>
-            <p className="text-background/60 max-w-sm text-sm leading-relaxed">
-              Máquinas de pintura profissional que transformam a produtividade e os resultados de pintores e construtoras em todo o Brasil.
+            <p className="text-background/60 max-w-sm text-sm leading-relaxed mb-3">
+              Máquinas de pintura profissional. Revendedora autorizada:
             </p>
+            <a href="https://www.casadoviana.com/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold text-sm hover:text-primary/80 transition-colors">
+              Casa do Viana ↗
+            </a>
           </div>
+
+          {/* Produtos */}
           <div>
             <h4 className="font-display font-bold text-background mb-4 text-sm">Produtos</h4>
             <ul className="space-y-2.5">
@@ -32,19 +61,48 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
-            <h4 className="font-display font-bold text-background mb-4 text-sm">Contato</h4>
-            <ul className="space-y-2.5">
-              <li><a href="tel:+5500000000000" className="text-background/60 hover:text-primary transition-colors text-sm">(00) 0000-0000</a></li>
-              <li><a href="mailto:contato@nauber.com.br" className="text-background/60 hover:text-primary transition-colors text-sm">contato@nauber.com.br</a></li>
-              <li><a href="#orcamento" className="text-primary font-semibold hover:text-primary/80 transition-colors text-sm">Solicitar Orçamento →</a></li>
+
+            <h4 className="font-display font-bold text-background mb-3 mt-6 text-sm">Contato Geral</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2 text-background/60 text-sm">
+                <Phone className="w-3.5 h-3.5 shrink-0" />
+                <a href="tel:+552132513756" className="hover:text-primary transition-colors">(21) 3251-3756</a>
+              </li>
+              <li className="flex items-center gap-2 text-background/60 text-sm">
+                <Phone className="w-3.5 h-3.5 shrink-0" />
+                <a href="https://wa.me/5521966115638" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(21) 96611-5638</a>
+              </li>
+              <li className="flex items-center gap-2 text-background/60 text-sm">
+                <Clock className="w-3.5 h-3.5 shrink-0" />
+                <span>Seg–Sex 8h–18h | Sáb 8h–13h</span>
+              </li>
             </ul>
           </div>
+
+          {/* Lojas (2 colunas) */}
+          <div className="md:col-span-2">
+            <h4 className="font-display font-bold text-background mb-4 text-sm">Nossas Lojas</h4>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {lojas.map((loja, i) => (
+                <div key={i} className="space-y-1.5">
+                  <p className="text-background font-semibold text-sm">{loja.nome}</p>
+                  <p className="flex items-start gap-1.5 text-background/60 text-xs">
+                    <MapPin className="w-3 h-3 mt-0.5 shrink-0" />
+                    {loja.endereco}
+                  </p>
+                  <p className="flex items-center gap-1.5 text-background/60 text-xs">
+                    <Mail className="w-3 h-3 shrink-0" />
+                    <a href={`mailto:${loja.email}`} className="hover:text-primary transition-colors">{loja.email}</a>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
         <div className="pt-6 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-background/40 text-xs">© {new Date().getFullYear()} Nauber. Todos os direitos reservados.</p>
-          <p className="text-background/40 text-xs">Desenvolvido com excelência para profissionais de pintura.</p>
+          <p className="text-background/40 text-xs">© {new Date().getFullYear()} Casa do Viana — Revendedora Autorizada Nauber. Todos os direitos reservados.</p>
+          <p className="text-background/40 text-xs">Zona Oeste do Rio de Janeiro</p>
         </div>
       </div>
     </footer>
